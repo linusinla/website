@@ -1,0 +1,179 @@
+/* variables */
+:root {
+  --base: #0a0600;
+  --main: #ffa939;
+  --text: #ffeccf;
+}
+
+/* general styling */
+
+html {
+  font-family: 'JetBrains Mono', Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--base);
+  margin: 0 auto;
+  /*max-width: 30rem;*/
+  max-width: 65rem;
+  line-height: 1.5;
+  padding: 0rem .5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+
+  color: var(--main);
+
+  text-align: left;
+
+  font-weight: 600;
+  font-size: min(7.5vw, 3em);
+  font-style: normal;
+
+  border-style: none;
+
+  margin: 0px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main);
+
+  text-align: left;
+
+  font-weight: 500;
+  font-style: normal;
+
+  border-style: none;
+
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+time {
+  color: var(--main);
+}
+
+p {
+  color: var(--text);
+
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main);
+}
+
+a:hover {
+  background: var(--main);
+  color: var(--base);
+  text-decoration: underline;
+}
+
+/* class styling */
+
+.flexbox-container>* {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* responsive ui / menu */
+
+nav {
+  background-color: var(--base);
+  padding: 1.2em 2.5em;
+  max-width: 1200px;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  /*display: none;*/
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+  font-weight: 700;
+}
+
+nav ul li a {
+  color: var(--main);
+  text-decoration: underline;
+}
+
+nav ul li a:hover {
+  background-color: var(--main);
+  color: var(--base);
+}
+
+article {
+  border-width: 1px 9px 9px 1px;
+  border-radius: 10px;
+  border-color: var(--main);
+  border-style: solid;
+  padding: 1em;
+}
+
+article:hover {
+  border-width: 5px;
+}
+
+@media screen and (min-width: 400px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 800px) {
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexbox-container>.sidenav {
+    width: calc(100% / 5);
+  }
+
+  .flexbox-container>.main {
+    width: calc(100% / 5 * 3.5);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --base: #fffbf6;
+    --main: #ffa939;
+    --text: #1d1100;
+  }
+}
